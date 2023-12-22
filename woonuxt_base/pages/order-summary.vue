@@ -24,9 +24,9 @@ function formatDate(date = '') {
   });
 }
 
-function formatPrice(price: string) {
-  return parseFloat(price).toLocaleString('en-US', { style: 'currency', currency: 'EUR' });
-}
+const formatPrice = (price: string | null) => {
+  return price ? price.replace(/&nbsp;/g, '') : '';
+};
 
 const isGuest = computed(() => {
   return !customer.value.databaseId;
@@ -86,20 +86,20 @@ const isGuest = computed(() => {
       <div>
         <div class="flex justify-between">
           <span>{{ $t('messages.shop.subtotal') }}</span>
-          <span>{{ order.subtotal }}</span>
+          <span>{{ formatPrice(order.subtotal!) }}</span>
         </div>
         <div class="flex justify-between">
           <span>{{ $t('messages.general.tax') }}</span>
-          <span>{{ order.totalTax }}</span>
+          <span>{{ formatPrice(order.totalTax!) }}</span>
         </div>
         <div class="flex justify-between">
           <span>{{ $t('messages.general.shipping') }}</span>
-          <span>{{ order.shippingTotal }}</span>
+          <span>{{ formatPrice(order.shippingTotal!) }}</span>
         </div>
         <hr class="my-8" />
         <div class="flex justify-between">
           <span class>{{ $t('messages.shop.total') }}</span>
-          <span class="font-semibold">{{ order.total }}</span>
+          <span class="font-semibold">{{ formatPrice(order.total!) }}</span>
         </div>
       </div>
     </div>

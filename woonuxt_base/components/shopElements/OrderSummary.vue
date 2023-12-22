@@ -15,7 +15,7 @@ const { cart, isUpdatingCart } = useCart();
     <div class="grid gap-1 text-sm font-semibold text-gray-500">
       <div class="flex justify-between">
         <span>{{ $t('messages.shop.subtotal') }}</span
-        ><spa class="text-gray-700 tabular-nums" v-html="cart.subtotal" />
+        ><span class="text-gray-700 tabular-nums" v-html="cart.subtotal" />
       </div>
       <div class="flex justify-between">
         <span>{{ $t('messages.general.shipping') }}</span

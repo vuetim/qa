@@ -1,11 +1,30 @@
 <script setup>
 const { formatURI } = useHelpers();
+const { addToCart, isUpdatingCart } = useCart();
+
 const route = useRoute();
 const props = defineProps({
   node: { type: Object, default: null },
   index: { type: Number, default: 1 },
+  showAddToCart: { type: Boolean, default: true }, //  control button visibility
 });
+// method to add product to card
+const isAddingToCart = ref(false);
 
+const addToCartHandler = async () => {
+  isAddingToCart.value = true;
+
+  const addToCartInput = {
+    productId: props.node.databaseId,
+    quantity: 1, // Adjust the quantity as needed
+  };
+
+  try {
+    await addToCart(addToCartInput);
+  } finally {
+    isAddingToCart.value = false;
+  }
+};
 const imgWidth = 220;
 const imgHeight = Math.round(imgWidth * 1.125);
 
@@ -60,12 +79,22 @@ const colorVariableImage = computed(() => {
         format="webp"
         densities="x1 x2" />
     </NuxtLink>
+
     <div class="p-2">
       <StarRating :rating="node.averageRating" :count="node.reviewCount" />
       <NuxtLink :to="`/product/${formatURI(node.slug)}`" :title="node.name">
         <h2 class="mb-2 font-light leading-tight">{{ node.name }}</h2>
       </NuxtLink>
       <ProductPrice class="text-sm" :sale-price="node.salePrice" :regular-price="node.regularPrice" />
+      <button
+        v-if="showAddToCart"
+        aria-label="Add To Cart"
+        id="Add To Cart"
+        @click="addToCartHandler"
+        :disabled="isUpdatingCart || isAddingToCart"
+        class="add-to-cart-button text-white text-sm mt-2 w-full hover:bg-slate-600 bg-black py-2 px-4 rounded-md cursor-pointer">
+        {{ isAddingToCart ? 'Adding...' : 'Add to Cart' }}
+      </button>
     </div>
   </div>
 </template>

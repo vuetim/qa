@@ -43,15 +43,14 @@ watch(
     <Transition name="fade">
       <div v-if="isShowingCart || isShowingMobileMenu" class="bg-black opacity-25 inset-0 z-40 fixed" @click="underlayCick"></div>
     </Transition>
-
-    <LazyAppFooter />
   </div>
+  <FooterVue />
 </template>
 
 <style lang="postcss">
 html,
 body {
-  @apply bg-gray-100 text-gray-900;
+  @apply bg-white text-gray-900;
   scroll-behavior: smooth;
 }
 

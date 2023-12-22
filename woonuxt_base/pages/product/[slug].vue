@@ -134,7 +134,7 @@ const updateSelectedVariations = (variations: Attribute[]): void => {
     </div>
     <div class="my-32" v-if="product.related">
       <div class="mb-4 text-xl font-semibold">{{ $t('messages.shop.youMayLike') }}</div>
-      <ProductRow :products="product.related.nodes" class="grid-cols-2 md:grid-cols-4 lg:grid-cols-5" />
+      <ProductRow :products="product.related.nodes" :show-add-to-cart="false" class="grid-cols-2 md:grid-cols-4 lg:grid-cols-5" />
     </div>
   </main>
 </template>

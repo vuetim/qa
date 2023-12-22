@@ -8,6 +8,6 @@ watch(locale, (newLocale) => {
 
 <template>
   <select v-model="locale" aria-label="Language switcher">
-    <option v-for="locale in locales" :key="locale" :value="locale.code" v-html="locale.name" />
+    <option class="text-black" v-for="locale in locales" :key="locale" :value="locale.code" v-html="locale.name" />
   </select>
 </template>

@@ -9,6 +9,10 @@ const refresh = async () => {
   scrollToTop();
   await getOrders();
 };
+const formatPrice = (price) => {
+  // Remove non-breaking space (&nbsp;) from the price string
+  return price ? price.replace(/&nbsp;/g, '') : '';
+};
 </script>
 
 <template>
@@ -35,7 +39,7 @@ const refresh = async () => {
               {{ order.status }}
             </td>
             <td class="text-right rounded-r-lg">
-              {{ order.total }}
+              {{ formatPrice(order.total) }}
             </td>
           </tr>
         </tbody>

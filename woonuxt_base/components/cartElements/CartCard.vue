@@ -19,7 +19,7 @@ const removeItem = () => {
 
 <template>
   <SwipeCard @remove="removeItem">
-    <li v-if="productType" class="flex items-center gap-3">
+    <li v-if="productType" class="flex items-center gap-4">
       <NuxtLink :to="productSlug">
         <img
           v-if="productType.image"
@@ -42,7 +42,7 @@ const removeItem = () => {
       </NuxtLink>
       <div class="flex-1">
         <NuxtLink class="leading-tight" :to="productSlug">{{ productType.name }}</NuxtLink>
-        <ProductPrice class="mt-1 text-xs" :sale-price="productType.salePrice" :regular-price="productType.regularPrice" />
+        <ProductPrice class="mt-0 text-xs" :sale-price="productType.salePrice" :regular-price="productType.regularPrice" />
       </div>
       <input
         v-model.number="quantity"

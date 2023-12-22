@@ -3,7 +3,7 @@
     <h1 class="mb-8 text-3xl font-semibold text-primary">Contact Page from Parent</h1>
     <div class="my-8 prose">
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facilis, commodi illum repellat accusamus praesentium quaerat ut ducimus ipsam deserunt, a voluptate id
+        test Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat facilis, commodi illum repellat accusamus praesentium quaerat ut ducimus ipsam deserunt, a voluptate id
         similique ullam, provident tenetur molestiae ad. Ea aperiam esse eaque aut, beatae consectetur nam velit unde! Et excepturi quam eos labore, nulla impedit recusandae
         quaerat maxime expedita.
       </p>

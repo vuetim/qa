@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-  modelValue: { type: String, required: true },
+  modelValue: { type: String, default: null },
   countryCode: { type: String, required: true, default: 'IE' },
 });
 

@@ -26,19 +26,14 @@ const billing = toRef(props, 'modelValue');
       <input v-model="billing.address1" placeholder="O'Connell Street" type="text" required />
     </div>
 
-    <div class="w-full col-span-full">
-      <label for="address2">{{ $t('messages.billing.address2') }}</label>
-      <input v-model="billing.address2" placeholder="Dublin 1" type="text" />
-    </div>
-
     <div class="w-full">
       <label for="city">{{ $t('messages.billing.city') }}</label>
-      <input v-model="billing.city" placeholder="Dublin" type="text" required />
+      <input v-model="billing.city" name="city" placeholder="Dublin" type="text" required />
     </div>
 
     <div class="w-full">
       <label for="country">County</label>
-      <LazyStateSelect v-model="billing.state" :default-value="billing.state" :country-code="billing.country" @change="updateShippingLocation" />
+      <StateSelect v-model="billing.state" :default-value="billing.state" :country-code="billing.country" @change="updateShippingLocation" />
     </div>
 
     <div class="w-full">
@@ -48,7 +43,7 @@ const billing = toRef(props, 'modelValue');
 
     <div class="w-full">
       <label for="zip">ZIP ({{ $t('messages.general.optional') }})</label>
-      <input v-model="billing.postcode" placeholder="D01 1234" type="text" required />
+      <input v-model="billing.postcode" name="zip" placeholder="D01 1234" type="text" />
     </div>
 
     <div class="w-full col-span-full">

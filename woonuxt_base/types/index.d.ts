@@ -145,7 +145,7 @@ interface Product {
 interface SimpleProduct {
   name?: string | null;
   price?: string | null;
-  regularPrice?: string | null;
+  regularPrice?: number  | null;
   salePrice?: string | null;
   stockStatus?: StockStatusEnum | null;
   stockQuantity?: number | null;

@@ -28,17 +28,17 @@ const shipping = toRef(props, 'modelValue');
 
     <div class="w-full col-span-full">
       <label for="address2">{{ $t('messages.billing.address2') }}</label>
-      <input v-model="shipping.address2" placeholder="Dublin 1" type="text" />
+      <input v-model="shipping.address2" name="address2" placeholder="Dublin 1" type="text" />
     </div>
 
     <div class="w-full">
       <label for="city">{{ $t('messages.billing.city') }}</label>
-      <input v-model="shipping.city" placeholder="Dublin" type="text" required />
+      <input v-model="shipping.city" name="city" placeholder="Dublin" type="text" />
     </div>
 
     <div class="w-full">
       <label for="zip">ZIP ({{ $t('messages.general.optional') }})</label>
-      <input v-model="shipping.postcode" placeholder="D01 1234" type="text" required />
+      <input v-model="shipping.postcode" placeholder="D01 1234" type="text" />
     </div>
 
     <div class="w-full">
