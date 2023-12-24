@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="from-gray-900 to-gray-700 bg-gradient-to-b pt-4 text-white">
+  <div class="from-gray-900 to-gray-700 bg-gradient-to-t pt-4 text-white">
     <div class="container flex flex-wrap justify-between gap-12 my-24 md:gap-24">
       <div class="mr-auto">
         <Logo />
