@@ -34,14 +34,14 @@ useHead({
     <!-- Features -->
     <section class=" container xl:grid xxl:grid 2xl:grid gap-4 my-20 md:grid-cols-2 lg:grid-cols-4">
       <div class="flex items-center gap-8 p-8  rounded-lg bg-gray-100">
-        <NuxtImg src="../static/icons/box.svg" width="60" height="60" alt="Free Shipping" loading="lazy" />
+        <img src="../static/icons/box.svg" width="60" height="60" alt="Free Shipping" loading="lazy" />
         <div>
           <h3 class="text-xl font-semibold">Free Shipping</h3>
           <p class="text-sm">Free shipping on order over €50</p>
         </div>
       </div>
       <div class="flex items-center gap-8 p-8 bg-gray-100 rounded-lg">
-        <NuxtImg src="../static/icons/moneyback.svg" width="60" height="60" alt="Money Back" loading="lazy" />
+        <img src="../static/icons/moneyback.svg" width="60" height="60" alt="Money Back" loading="lazy" />
         <div>
           <h3 class="text-xl font-semibold">Peace of Mind</h3>
           <p class="text-sm">30 days money back guarantee</p>
@@ -55,7 +55,7 @@ useHead({
         </div>
       </div>
       <div class="flex items-center gap-8 p-8 bg-gray-100 rounded-lg">
-        <NuxtImg src="../static/icons/support.svg" width="60" height="60" alt="Support 24/7" loading="lazy" />
+        <img src="../static/icons/support.svg" width="60" height="60" alt="Support 24/7" loading="lazy" />
         <div>
           <h3 class="text-xl font-semibold">Support 24/7</h3>
           <p class="text-sm">24/7 Online support</p>
