@@ -4,7 +4,7 @@
       width="1400"
       height="800"
       class="object-cover rounded-lg w-full h-[420px] lg:h-[560px] xl:h-[640px]"
-      src="../../public/images/banner1.jpg"
+      src="../../public//images/banner1.jpg"
       alt="Hero image"
       loading="eager"
       format="webp"
