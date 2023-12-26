@@ -5,6 +5,6 @@ const linkTitle = computed(() => (viewer.value ? viewer.value.username : 'Sign I
 
 <template>
   <NuxtLink to="/my-account" :title="linkTitle">
-    <Icon name="ion:person-outline" color="white" size="20" />
+    <Icon name="ion:person-outline" color="black" size="20" />
   </NuxtLink>
 </template>

@@ -3,7 +3,7 @@ const { isShowingSearch } = useSearching();
 </script>
 
 <template>
-  <header class="sticky top-0 z-40 from-gray-900 to-gray-700 bg-gradient-to-l shadow-sm shadow-light-500">
+  <header class=" top-0 z-40 from-white bg-gradient-to-l shadow-sm shadow-light-500">
     <div class="container flex items-center justify-between py-4">
       <div class="flex items-center">
         <MenuTrigger class="lg:hidden" />
@@ -14,7 +14,7 @@ const { isShowingSearch } = useSearching();
         <ProductSearch class="hidden sm:inline-flex max-w-[320px] w-[60%]" />
         <SearchTrigger />
         <NuxtLink to="/wishlist" title="Wishlist">
-          <Icon name="ion:heart-outline" size="20" color="white" />
+          <Icon name="ion:heart-outline" size="20" color="black" />
         </NuxtLink>
         <SignInLink />
         <CartTrigger />

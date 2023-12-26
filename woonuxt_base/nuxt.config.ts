@@ -75,7 +75,20 @@ export default defineNuxtConfig({
       version: pkg.version || '0.0.0',
     },
   },
+  image: {
+    format: ['webp' ,'png', 'jpg' ,'svg'],
 
+    // The screen sizes predefined by `@nuxt/image`:
+    screens: {
+      'xs': 320,
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      'xxl': 1536,
+      '2xl': 1536
+    },
+  },
   // Multilingual support
   i18n: {
     locales: [
@@ -90,4 +103,5 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     strategy: 'no_prefix',
   },
+
 });
